@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users List</title>
+    <!-- Link to Tailwind CSS CDN or local file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-4">Users List</h1>
+        <table class="w-full border-collapse border border-gray-400">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-2 border border-gray-400">ID</th>
+                    <th class="p-2 border border-gray-400">Name</th>
+                    <th class="p-2 border border-gray-400">Email</th>
+                    <th class="p-2 border border-gray-400">Role</th>
+                    <th class="p-2 border border-gray-400">User Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr class="">
+                    <td class="p-2 border border-gray-400">{{ user.id }}</td>
+                    <td class="p-2 border border-gray-400">{{ user.name }}</td>
+                    <td class="p-2 border border-gray-400">{{ user.email }}</td>
+                    <td class="p-2 border border-gray-400">{{ user.role }}</td>
+                    <td class="p-2 border border-gray-400 " style="color: dodgerblue"><a href="{% url 'user_details' user.id %}">{{ user.name }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
