@@ -112,7 +112,19 @@ c. Write SQL queries to:
   Solution:
 
        SELECT * FROM users.app_user WHERE id = 1;
+  NOTE:
 
+          Connect database:
+                    DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.mysql',
+                        'NAME': 'your-database-name',
+                        'USER': 'your-username',
+                        'PASSWORD': 'your-password',
+                        'PORT': 'your-port no'
+                    }
+                }
+                
   
 Task 3: Version Control with Git
 a. Initialize a new Git repository for your Django project.
