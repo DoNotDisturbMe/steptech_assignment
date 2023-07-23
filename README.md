@@ -67,31 +67,86 @@ Solution:
       
 Note : For beautification you can use bootstrap, tailwind or custom css of any css framework of your
 choice, but it is not mandatory, you can skip if you want.
-Answer: I'm using Tailwind and CSS via CDN.
+Answer: 
+        
+        I'm using Tailwind and CSS via CDN.
 
 
 Task 2: Database Interaction
 a. Create a MySQL database with the name "users".
+Solution: 
+
+        CREATE DATABASER users;
+        
 b. Design a table "users" with the following columns:
 - id (int, primary key)
 - name (varchar)
 - email (varchar)
 - role (varchar)
+  Solution:
+
+                  CREATE TABLE `app_user` (
+                  `id` bigint NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) NOT NULL,
+                  `email` varchar(255) NOT NULL,
+                  `role` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+  
 c. Write SQL queries to:
 - Insert sample data into the "users" table.
+  Solution: -
+  
+                INSERT INTO users.app_user (id, name, email, role)
+                VALUES
+                    (3, 'John Doe', 'john@example.com', 'Admin'),
+                    (4, 'Jane Smith', 'jane@example.com', 'User'),
+                     (5, 'Bob Johnson', 'bob@example.com', 'User');
+    
 - Retrieve all users from the "users" table.
+  Solution:
+  
+          select * from users.app_user
+  
 - Retrieve a specific user by their ID.
+  Solution:
+
+       SELECT * FROM users.app_user WHERE id = 1;
 
   
 Task 3: Version Control with Git
-a. Initialize a new Git repository for your Flask/Django project.
+a. Initialize a new Git repository for your Django project.
 b. Create a branch named "steptech_assignment".
 c. Make necessary commits as you implement the Flask API and database functionality.
 d. Push your branch to a remote Git repository (GitHub, GitLab, etc.).
 e. Create a pull request from your branch to the main branch (or master branch) of the repository.
+Solutio: 
+        Task 3 every instruction is done.
 
 
 Task 4: Documentation
-a. Write a brief README file that includes instructions on how to set up and run your Flask
+a. Write a brief README file that includes instructions on how to set up and run your django
 application.
+Steps:
+        1. Create django project and create django app inside the django project folder.
+        2. Create model in inside the app/modle.py.
+        3. Connect the MySQL database with django, in setting.py file , which is present in project            folder.
+        
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.mysql',
+                        'NAME': 'your-database-name',
+                        'USER': 'your-username',
+                        'PASSWORD': 'your-password',
+                        'PORT': 'your-port no'
+                    }
+                }
+                
+        4. Then give command in termnial: py manage.py makemigrations and py manage.py migrate
+        5. Then html template.
+        6. Then create function , which do post or get request.
+        7. Then run our project using cmd: py manage.py runserver
+        
 b. Include information about the database schema and how to populate it with sample data.
+Solution: 
+                Every thing is menstioned on top.
