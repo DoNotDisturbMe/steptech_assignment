@@ -121,6 +121,7 @@ c. Make necessary commits as you implement the Flask API and database functional
 d. Push your branch to a remote Git repository (GitHub, GitLab, etc.).
 e. Create a pull request from your branch to the main branch (or master branch) of the repository.
 Solutio: 
+
         Task 3 every instruction is done.
 
 
@@ -128,6 +129,7 @@ Task 4: Documentation
 a. Write a brief README file that includes instructions on how to set up and run your django
 application.
 Steps:
+
         1. Create django project and create django app inside the django project folder.
         2. Create model in inside the app/modle.py.
         3. Connect the MySQL database with django, in setting.py file , which is present in project            folder.
@@ -149,4 +151,5 @@ Steps:
         
 b. Include information about the database schema and how to populate it with sample data.
 Solution: 
+
                 Every thing is menstioned on top.
