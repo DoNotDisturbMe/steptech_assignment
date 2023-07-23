@@ -113,8 +113,8 @@ c. Write SQL queries to:
 
        SELECT * FROM users.app_user WHERE id = 1;
   NOTE:
-
           Connect database:
+  
                     DATABASES = {
                     'default': {
                         'ENGINE': 'django.db.backends.mysql',
